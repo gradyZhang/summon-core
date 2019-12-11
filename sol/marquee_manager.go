@@ -2,7 +2,7 @@ package sol
 import (
 	"sync"
 	"github.com/gradyZhang/summon-core/proto_msg"
-	"github.com/protobuf/proto"
+	"github.com/gogo/protobuf/proto"
 	"time"
 	"github.com/gradyZhang/summon-core/def"
 )
