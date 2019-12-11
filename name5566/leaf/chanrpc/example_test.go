@@ -2,7 +2,7 @@ package chanrpc_test
 
 import (
 	"fmt"
-	"name5566/leaf/chanrpc"
+	"github.com/gradyZhang/summon-core/name5566/leaf/chanrpc"
 	"sync"
 )
 

@@ -3,7 +3,7 @@ package network
 import (
 	"crypto/tls"
 	"github.com/gorilla/websocket"
-	"name5566/leaf/log"
+	"github.com/gradyZhang/summon-core/name5566/leaf/log"
 	"net"
 	"net/http"
 	"sync"

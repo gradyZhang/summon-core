@@ -1,7 +1,7 @@
 package network
 
 import (
-	"name5566/leaf/log"
+	"github.com/gradyZhang/summon-core/name5566/leaf/log"
 	"net"
 	"sync"
 )

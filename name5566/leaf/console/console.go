@@ -2,8 +2,8 @@ package console
 
 import (
 	"bufio"
-	"name5566/leaf/conf"
-	"name5566/leaf/network"
+	"github.com/gradyZhang/summon-core/name5566/leaf/conf"
+	"github.com/gradyZhang/summon-core/name5566/leaf/network"
 	"math"
 	"strconv"
 	"strings"

@@ -11,7 +11,7 @@ package core
 import (
 	"github.com/samuel/go-zookeeper/zk"
 	"time"
-	"github.com/name5566/leaf/log"
+	"github.com/gradyZhang/summon-core/name5566/leaf/log"
 )
 
 const CONFIG_NODE_NAME string = "config"
@@ -162,4 +162,3 @@ func (this *ConfigCenter) RemoveConfig(configNode string,configType string) bool
 	log.Release("remove config %v success.",configPath)
 	return true
 }
-

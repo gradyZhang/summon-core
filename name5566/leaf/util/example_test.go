@@ -2,7 +2,7 @@ package util_test
 
 import (
 	"fmt"
-	"name5566/leaf/util"
+	"github.com/gradyZhang/summon-core/name5566/leaf/util"
 )
 
 func ExampleMap() {

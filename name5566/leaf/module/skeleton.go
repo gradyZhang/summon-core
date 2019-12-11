@@ -1,10 +1,10 @@
 package module
 
 import (
-	"name5566/leaf/chanrpc"
-	"name5566/leaf/console"
-	"name5566/leaf/go"
-	"name5566/leaf/timer"
+	"github.com/gradyZhang/summon-core/name5566/leaf/chanrpc"
+	"github.com/gradyZhang/summon-core/name5566/leaf/console"
+	"github.com/gradyZhang/summon-core/name5566/leaf/go"
+	"github.com/gradyZhang/summon-core/name5566/leaf/timer"
 	"time"
 )
 

@@ -2,8 +2,8 @@ package g
 
 import (
 	"container/list"
-	"name5566/leaf/conf"
-	"name5566/leaf/log"
+	"github.com/gradyZhang/summon-core/name5566/leaf/conf"
+	"github.com/gradyZhang/summon-core/name5566/leaf/log"
 	"runtime"
 	"sync"
 )

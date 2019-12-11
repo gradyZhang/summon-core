@@ -2,7 +2,7 @@ package g_test
 
 import (
 	"fmt"
-	"name5566/leaf/go"
+	"github.com/gradyZhang/summon-core/name5566/leaf/go"
 	"time"
 )
 

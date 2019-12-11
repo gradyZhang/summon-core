@@ -2,7 +2,7 @@ package network
 
 import (
 	"github.com/gorilla/websocket"
-	"name5566/leaf/log"
+	"github.com/gradyZhang/summon-core/name5566/leaf/log"
 	"sync"
 	"time"
 )

@@ -12,7 +12,7 @@ package core
 import (
 	"github.com/samuel/go-zookeeper/zk"
 	"time"
-	"github.com/name5566/leaf/log"
+	"github.com/gradyZhang/summon-core/name5566/leaf/log"
 	"encoding/json"
 	"sync"
 )

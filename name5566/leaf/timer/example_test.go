@@ -2,7 +2,7 @@ package timer_test
 
 import (
 	"fmt"
-	"name5566/leaf/timer"
+	"github.com/gradyZhang/summon-core/name5566/leaf/timer"
 	"time"
 )
 

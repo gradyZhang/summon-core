@@ -4,8 +4,8 @@ import (
 	"encoding/json"
 	"errors"
 	"fmt"
-	"name5566/leaf/chanrpc"
-	"name5566/leaf/log"
+	"github.com/gradyZhang/summon-core/name5566/leaf/chanrpc"
+	"github.com/gradyZhang/summon-core/name5566/leaf/log"
 	"reflect"
 )
 

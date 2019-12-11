@@ -1,11 +1,11 @@
 package leaf
 
 import (
-	"name5566/leaf/cluster"
-	"name5566/leaf/conf"
-	"name5566/leaf/console"
-	"name5566/leaf/log"
-	"name5566/leaf/module"
+	"github.com/gradyZhang/summon-core/name5566/leaf/cluster"
+	"github.com/gradyZhang/summon-core/name5566/leaf/conf"
+	"github.com/gradyZhang/summon-core/name5566/leaf/console"
+	"github.com/gradyZhang/summon-core/name5566/leaf/log"
+	"github.com/gradyZhang/summon-core/name5566/leaf/module"
 	"os"
 	"os/signal"
 )
