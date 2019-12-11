@@ -2,7 +2,7 @@ package sol
 
 import (
 	"sync"
-	"aliens/common/cache"
+	"github.com/gradyZhang/summon-core/aliens/common/cache"
 	"time"
 	"strconv"
 	"sort"

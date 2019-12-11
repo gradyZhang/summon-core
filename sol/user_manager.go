@@ -3,9 +3,9 @@ package sol
 import (
 	"sync"
 	"time"
-	"aliens/common/cache"
+	"github.com/gradyZhang/summon-core/aliens/common/cache"
 	"strconv"
-	"aliens/log"
+	"github.com/gradyZhang/summon-core/aliens/log"
 	"strings"
 	"encoding/json"
 	"bytes"

@@ -13,7 +13,7 @@ import (
 	"time"
 	"testing"
 	"fmt"
-	"aliens/log"
+	"github.com/gradyZhang/summon-core/aliens/log"
 )
 
 //func test() {

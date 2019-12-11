@@ -3,10 +3,10 @@ package sol
 import (
 	"sync"
 	"strconv"
-	"aliens/common/cache"
+	"github.com/gradyZhang/summon-core/aliens/common/cache"
 	"time"
 	"encoding/json"
-	"aliens/log"
+	"github.com/gradyZhang/summon-core/aliens/log"
 )
 
 const (

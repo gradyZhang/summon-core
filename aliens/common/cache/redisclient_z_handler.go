@@ -11,7 +11,7 @@ package cache
 
 import (
 	"github.com/garyburd/redigo/redis"
-	"aliens/log"
+	"github.com/gradyZhang/summon-core/aliens/log"
 	"errors"
 )
 

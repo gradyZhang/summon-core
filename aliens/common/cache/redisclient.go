@@ -10,7 +10,7 @@
 package cache
 
 import (
-	"aliens/log"
+	"github.com/gradyZhang/summon-core/aliens/log"
 	"fmt"
 	"github.com/FZambia/sentinel"
 	"github.com/garyburd/redigo/redis"

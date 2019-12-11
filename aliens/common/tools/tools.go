@@ -5,7 +5,7 @@ import (
 	"encoding/csv"
 	"strings"
 	"strconv"
-	"aliens/common/character"
+	"github.com/gradyZhang/summon-core/aliens/common/character"
 	"encoding/json"
 	"fmt"
 	"crypto/md5"

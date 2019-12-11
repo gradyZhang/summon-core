@@ -5,7 +5,7 @@ import (
 "os"
 "time"
 "def"
-"aliens/common/tools"
+"github.com/gradyZhang/summon-core/aliens/common/tools"
 "strings"
 "io"
 "encoding/json"

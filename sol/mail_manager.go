@@ -3,8 +3,8 @@ package sol
 import (
 	"sync"
 	"database/sql"
-	"aliens/common/cache"
-	"aliens/log"
+	"github.com/gradyZhang/summon-core/aliens/common/cache"
+	"github.com/gradyZhang/summon-core/aliens/log"
 	"strings"
 	"time"
 	"encoding/json"

@@ -2,7 +2,7 @@ package sol
 
 import (
 	"strconv"
-	"aliens/common/character"
+	"github.com/gradyZhang/summon-core/aliens/common/character"
 	"time"
 	"encoding/json"
 	"strings"
