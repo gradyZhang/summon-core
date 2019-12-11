@@ -4,7 +4,7 @@ import (
 "sync"
 "os"
 "time"
-"def"
+"github.com/gradyZhang/summon-core/def"
 "github.com/gradyZhang/summon-core/aliens/common/tools"
 "strings"
 "io"

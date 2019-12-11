@@ -1,10 +1,10 @@
 package sol
 import (
 	"sync"
-	"proto_msg"
+	"github.com/gradyZhang/summon-core/proto_msg"
 	"github.com/protobuf/proto"
 	"time"
-	"def"
+	"github.com/gradyZhang/summon-core/def"
 )
 const(
 	Mar_Type_None int32 = iota
