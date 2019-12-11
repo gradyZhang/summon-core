@@ -110,45 +110,46 @@ func (this *RedisCacheClient) Start() {
 
 //启动缓存客户端
 func (this *RedisCacheClient) StartSentinel() {
-	sntnl := &sentinel.Sentinel{
-		Addrs:this.SentinelAddr,
-		MasterName:this.MasterName,
-		Dial: func(addr string) (redis.Conn, error) {
-			timeout := 50000 * time.Millisecond
-			c,err := redis.DialTimeout("tcp",addr,timeout,timeout,timeout)
-			if err != nil {
-				return nil,err
-			}
-			return c,nil
-		},
-	}
-	this.pool = &redis.Pool{
-		MaxIdle:     this.MaxIdle,
-		MaxActive:   this.MaxActive,
-		IdleTimeout: this.IdleTimeout, //空闲释放时间
-		Dial:
-		func() (redis.Conn, error) {
-			masterAddr,err := sntnl.MasterAddr()
-			if err != nil {
-				return nil,err
-			}
-			c,err := redis.Dial("tcp",masterAddr)
-			if err != nil {
-				return nil,err
-			}
-			if len(this.Password) > 0 {
-				if _,err := c.Do("AUTH",this.Password);err != nil {
-					c.Close()
-					return nil,err
-				}
-			}
-			if _,err := c.Do("SELECT",this.DBIdx);err != nil {
-				return nil,err
-			}
-			return c,nil
-		},
-		TestOnBorrow:CheckRedisRole,
-	}
+	this.Start()
+	// sntnl := &sentinel.Sentinel{
+	// 	Addrs:this.SentinelAddr,
+	// 	MasterName:this.MasterName,
+	// 	Dial: func(addr string) (redis.Conn, error) {
+	// 		timeout := 50000 * time.Millisecond
+	// 		c,err := redis.DialTimeout("tcp",addr,timeout,timeout,timeout)
+	// 		if err != nil {
+	// 			return nil,err
+	// 		}
+	// 		return c,nil
+	// 	},
+	// }
+	// this.pool = &redis.Pool{
+	// 	MaxIdle:     this.MaxIdle,
+	// 	MaxActive:   this.MaxActive,
+	// 	IdleTimeout: this.IdleTimeout, //空闲释放时间
+	// 	Dial:
+	// 	func() (redis.Conn, error) {
+	// 		masterAddr,err := sntnl.MasterAddr()
+	// 		if err != nil {
+	// 			return nil,err
+	// 		}
+	// 		c,err := redis.Dial("tcp",masterAddr)
+	// 		if err != nil {
+	// 			return nil,err
+	// 		}
+	// 		if len(this.Password) > 0 {
+	// 			if _,err := c.Do("AUTH",this.Password);err != nil {
+	// 				c.Close()
+	// 				return nil,err
+	// 			}
+	// 		}
+	// 		if _,err := c.Do("SELECT",this.DBIdx);err != nil {
+	// 			return nil,err
+	// 		}
+	// 		return c,nil
+	// 	},
+	// 	TestOnBorrow:CheckRedisRole,
+	// }
 }
 
 func CheckRedisRole(c redis.Conn, t time.Time) error {
