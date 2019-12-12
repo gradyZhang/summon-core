@@ -81,6 +81,7 @@ const (
 	ReqRecDraw			 int32 = 5105  // 请求 领取抽卡积分奖励
 	ReqPrizeWheel		 int32 = 5107  // 请求 大转盘
 	ReqContinueChargeRec int32 = 5111  // 请求 连续充值奖励领取
+	ReqChargeSpineShowData int32 = 5112 // 请求 累充spine表现数据
 	ReqChapterInfo       int32 = 6000 //请求关卡静态信息
 	ReqChapterNodePickUp int32 = 6005 //请求关卡奖励拾取
 
@@ -284,6 +285,7 @@ const (
 	RespDataActivityUpdate int32 = 15108	// 响应 
 	RespUpdatePlayerPrivileges int32 = 15109	// 更新玩家特权
 	RespContinueChargeRec int32 = 15111;	// 连续充值奖励领取
+	RespChargeSpineShowData int32 = 15112 // 累充spine表现数据
 
 	RespChapterInfo       int32 = 16000 //回复关卡静态数据
 	RespChapterNodePickUp int32 = 16005 //回复章节关卡拾取

@@ -54,7 +54,7 @@ message Req_Activity_Reward_Rec_ {
 message Resp_Activity_Reward_Rec_ {
     repeated Reward_Info_ Rewards = 1;  // 奖励
     optional int32 ChestIcon = 2;	// 宝箱icon
-	repeated Reward_Info_ ChestRewards = 3;// 宝箱展示
+    repeated Reward_Info_ ChestRewards = 3;// 宝箱展示
 }
 
 // 成长基金数据
@@ -69,9 +69,9 @@ message Resp_PlayerData_Activity_ {
     repeated int32 NewSign = 2; // 新手签到标识 0：不可领 1：可领 2：已领
     optional Reward_Info_ WeekJackpot = 3; // 周卡奖池
     repeated Reward_Info_ MonJackpot = 4;	// 月卡奖池
-	optional int64 MonExpiryTime = 5;// 月卡到期时间 0表无
+    optional int64 MonExpiryTime = 5;// 月卡到期时间 0表无
     optional int64 WeekExpiryTime = 6;  // 周卡到期时间
-	repeated int32 ChargeRewardID = 7;	// 充值奖励id
+    repeated int32 ChargeRewardID = 7;	// 充值奖励id
     optional int32 Dinner = 8;  // 午晚餐
     repeated int32 NewGift = 9; // 新手特惠礼包
     repeated int32 DailyGift = 10;//每日礼包
@@ -105,7 +105,7 @@ message Resp_PlayerUpdate_Activity_ {
     repeated Reward_Info_ MonJackpot = 4;	// 月卡奖池
     optional int64 MonExpiryTime = 5;// 月卡到期时间 0表无
     optional int64 WeekExpiryTime = 6;  // 周卡到期时间
-	repeated int32 ChargeRewardID = 7;	// 充值奖励id
+    repeated int32 ChargeRewardID = 7;	// 充值奖励id
     optional int32 Dinner = 8;  // 午晚餐
     repeated int32 NewGift = 9; // 新手特惠礼包
     repeated int32 DailyGift = 10;//每日礼包
@@ -133,16 +133,16 @@ message Resp_PlayerUpdate_Activity_ {
 
 // 请求 礼包领取
 message Req_Gift_{
-	optional int64 UserID = 1;//用户ID
-	optional string Code = 2;//礼包码
+    optional int64 UserID = 1;//用户ID
+    optional string Code = 2;//礼包码
 }
 
 // 响应 礼包领取
 message Resp_Gift_{
-	optional int64 UserID = 1;//用户ID(服务端专用)
-	optional string Gift = 2;//礼包内容(服务端专用)
-	optional int32 Err = 3;//错误码 0x00 正常, 0x01:礼包码不存在, 0x02:领取数量超出上限, 0x03:已经领取过了，0x04已经领取过同类型的了, 0x05:还未到领取时间 0x06:领取时间已过期 0xFF 未知错误
-	repeated Reward_Info_ Rewards = 4;//奖励内容
+    optional int64 UserID = 1;//用户ID(服务端专用)
+    optional string Gift = 2;//礼包内容(服务端专用)
+    optional int32 Err = 3;//错误码 0x00 正常, 0x01:礼包码不存在, 0x02:领取数量超出上限, 0x03:已经领取过了，0x04已经领取过同类型的了, 0x05:还未到领取时间 0x06:领取时间已过期 0xFF 未知错误
+    repeated Reward_Info_ Rewards = 4;//奖励内容
 }
 
 // 积分奖励
@@ -166,7 +166,7 @@ message Req_Continue_Charge_Rec_ {
 message Resp_Continue_Charge_Rec_ {
     repeated Reward_Info_ Rewards = 1;  // 奖励
     optional int32 ChestIcon = 2;	// 宝箱icon
-	repeated Reward_Info_ ChestRewards = 3;// 宝箱展示
+    repeated Reward_Info_ ChestRewards = 3;// 宝箱展示
 }
 
 // 抽卡商店
@@ -234,4 +234,20 @@ message Resp_Update_Player_Privileges_ {
     optional int32 VitBuyTimes = 2; // 体力购买次数
     optional int32 DrawHighFree = 3;    // 高级抽免费次数
     optional int32 VitBuyTimesLimit = 4;	// 体力购买次数
+}
+
+// 请求 获取累充客户端spine表现用数据
+message Req_GetChargeSpineShowData_ {
+}
+
+// 响应 获取累充客户端spine表现用数据
+message Resp_GetChargeSpineShowData_ {
+    repeated SpineShowData_ data = 1;
+}
+
+message SpineShowData_ {
+    optional int32 Id = 1;
+    optional int32 MonsterID = 2;
+    optional int32 Scale = 3;
+    repeated int32 Position = 4;
 }
